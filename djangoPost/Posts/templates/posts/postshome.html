@@ -1,0 +1,10 @@
+
+
+{% block content %}
+<h1>My Posts</h1>
+	{% for post in posts %}
+		<h2>{{ post.title }}</h2>
+		<small>Published on {{ post.published_at | date:"M d, Y" }} by {{ post.author | title}}</small>
+		<p>{{ post.content }}</p>
+	{% endfor %}
+{% endblock content %}
